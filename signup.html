@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create account — Stackly Bakery</title>
+<meta name="description" content="Create a Stackly Bakery account to order breads and cakes, book tasting tables and track bread-club rewards.">
+<meta name="theme-color" content="#16100F">
+<link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body class="auth-page" data-page="signup">
+<a class="skip-link" href="#signup-form">Skip to sign up</a>
+
+<main class="auth-panel">
+  <button class="back-btn auth-panel-back" type="button" data-go-back aria-label="Go back">
+    <span class="back-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
+    <span>Back</span>
+  </button>
+  <div class="lb" aria-hidden="true">
+    <img src="assets/img/auth-signup.webp" alt="" width="760" height="900" fetchpriority="high">
+  </div>
+  <div class="wob wob--gold" aria-hidden="true"></div>
+  <div class="wob wob--berry" aria-hidden="true"></div>
+
+  <div class="container panel-inner">
+    <a class="brand auth-brand-chip" href="index.html" aria-label="Stackly Bakery home">
+      <img src="stackly-logo-icon.webp" alt="" width="40" height="40">
+      <span>STACKLY<small>Bakery</small></span>
+    </a>
+    <h1>Make room for <em>better</em><br><span class="grad-text-v">mornings.</span></h1>
+    <p>Reserve loaves before they sell out, order celebration cakes and keep every favorite in one calm place.</p>
+  </div>
+</main>
+
+<section class="auth-form-shell" aria-label="Create a Stackly account">
+  <div class="auth-card">
+    <button class="back-btn card-back" type="button" data-go-back aria-label="Go back">
+      <span class="back-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span>
+      <span>Back</span>
+    </button>
+
+    <div class="auth-toggle auth-toggle--signup" role="group" aria-label="Switch between log in and sign up">
+      <span class="auth-toggle-thumb" aria-hidden="true"></span>
+      <a class="auth-toggle-opt" href="login.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>
+        Log in
+      </a>
+      <a class="auth-toggle-opt on" href="signup.html" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+        Sign up
+      </a>
+    </div>
+
+    <div class="form-head">
+      <span class="eyebrow">Create account</span>
+      <h1>Start your <span class="grad-text">Stackly story</span></h1>
+      <p>One calm minute &mdash; then your account is ready with orders, favorites and rewards.</p>
+    </div>
+
+    <form id="signup-form" novalidate>
+      <div class="field">
+        <label class="form-label" for="signup-name">Full name <span class="req">*</span></label>
+        <div class="input-wrap">
+          <span class="i-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <input class="input with-ico" id="signup-name" type="text" name="name" placeholder="Ada Whitfield" autocomplete="name" data-validate="name" required>
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label class="form-label" for="signup-email">Email address <span class="req">*</span></label>
+        <div class="input-wrap">
+          <span class="i-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+          <input class="input with-ico" id="signup-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" data-validate="email" required>
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label class="form-label" for="signup-phone">Phone number <small>10 digits</small></label>
+        <div class="input-wrap">
+          <span class="i-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <input class="input with-ico" id="signup-phone" type="tel" name="phone" inputmode="numeric" maxlength="10" placeholder="5551234567" autocomplete="tel" data-validate="phone" required>
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label class="form-label" for="signup-password">Password <span class="req">*</span> <small>8+ characters</small></label>
+        <div class="input-wrap">
+          <span class="i-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+          <input class="input with-ico with-toggle" id="signup-password" type="password" name="password" placeholder="Your password" autocomplete="new-password" data-validate="password" required>
+          <button class="toggle-pass" type="button" data-password-toggle="signup-password" aria-label="Show password">Show</button>
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field">
+        <label class="form-label" for="signup-confirm">Confirm password <span class="req">*</span></label>
+        <div class="input-wrap">
+          <span class="i-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <input class="input with-ico" id="signup-confirm" type="password" name="confirm" placeholder="Repeat it" autocomplete="new-password" data-validate="confirm" required>
+        </div>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field role-field">
+        <div class="role-switch" role="radiogroup" aria-label="Select account type">
+          <span class="role-thumb" aria-hidden="true"></span>
+          <label class="role-opt customer on">
+            <input type="radio" name="srole" value="customer" checked>
+            <span class="r-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span>
+            Customer
+          </label>
+          <label class="role-opt admin">
+            <input type="radio" name="srole" value="admin">
+            <span class="r-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h7V3H3zM14 21h7v-9h-7zM14 3v6h7V3zM3 21h7v-6H3z"/></svg></span>
+            Admin
+          </label>
+        </div>
+        <input type="hidden" name="role" value="customer" data-validate="role" required>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <div class="field terms-field">
+        <label class="check-row">
+          <input type="checkbox" name="terms" required>
+          <span>I understand this is a demo &mdash; my details stay in this browser and never leave this device. <a href="404.html">Read the demo terms</a>.</span>
+        </label>
+        <span class="field-error" aria-live="polite"></span>
+      </div>
+
+      <button class="button button--wide" type="submit">Create account <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+
+      <p class="form-note">Already have an account? <a href="login.html">Log in instead</a></p>
+    </form>
+
+    <div class="role-note">
+      <strong>Your privacy matters:</strong> after signup you go straight to the login screen. This demo stores only a local browser profile &mdash; never enter a real password.
+    </div>
+  </div>
+</section>
+</body>
+</html>

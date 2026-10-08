@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My dashboard — Stackly Bakery</title>
+<meta name="description" content="Stackly Bakery customer dashboard: track orders, favorites, bread-club rewards and reservations.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="stackly-logo-icon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body data-page="customer">
+<a class="skip-link" href="#dash-main">Skip to content</a>
+
+<div class="dash" data-dashboard>
+  <div class="dash-overlay" data-sidebar-overlay></div>
+
+  <aside class="dash-side" aria-label="Dashboard navigation">
+    <button class="dash-side-close" type="button" data-sidebar-close aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="dash-brand"><img src="stackly-logo-icon.webp" alt="Stackly Bakery logo" width="42" height="42"><span>STACKLY</span></div>
+    <nav class="dash-nav" data-dash-nav aria-label="Dashboard sections"></nav>
+    <div class="dash-side-foot">
+      <div class="dash-user">
+        <span class="avatar" data-user-initials>DC</span>
+        <div><strong data-user-email>customer@stackly.demo</strong><span data-role-name>Bread club member</span></div>
+      </div>
+      <button class="dash-signout" type="button" data-logout><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/></svg> Sign out</button>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="dash-top">
+      <button class="dash-burger" type="button" data-sidebar-toggle aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></button>
+      <div class="dash-title">
+        <h1>My kitchen table</h1>
+        <p>1 order in progress &middot; 2 reservations this week &middot; 340 bread-club points</p>
+      </div>
+      <div class="dash-top-actions">
+        <button class="icon-btn" type="button" data-dashboard-demo aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="dot"></span></button>
+      </div>
+    </header>
+
+    <div class="dash-title dash-title--below">
+      <h1>My kitchen table</h1>
+      <p>1 order in progress &middot; 2 reservations this week &middot; 340 bread-club points</p>
+    </div>
+
+    <div class="dash-body" id="dash-main">
+      <!-- ============ OVERVIEW ============ -->
+      <section class="dash-section" id="sec-overview">
+        <div class="dash-hero">
+          <span class="eyebrow eyebrow--light">Welcome back</span>
+          <h2>Hi <span data-user-name>Demo Customer</span>, your sourdough is proving.</h2>
+          <p>Order #2841 goes in the oven at 08:00 and will be ready for pickup by 09:30 at counter 2.</p>
+          <div class="dash-hero-actions">
+            <a class="button" href="404dash.html" data-dashboard-demo>Track order <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a class="button button--ghost button--light" href="404dash.html" data-dashboard-demo>Reorder favorites</a>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="kpi-head"><span class="kpi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18"/></svg></span><span class="kpi-trend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg> 2 new</span></div>
+            <strong data-count="3">0</strong><span>Orders this month</span>
+          </div>
+          <div class="kpi">
+            <div class="kpi-head"><span class="kpi-ico kpi-ico--berry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></span><span class="kpi-trend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg> 1 saved</span></div>
+            <strong data-count="7">0</strong><span>Favorite bakes</span>
+          </div>
+          <div class="kpi">
+            <div class="kpi-head"><span class="kpi-ico kpi-ico--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7 7 .5-5.4 4.6L18.3 21 12 17.3 5.7 21l1.7-6.9L2 9.5 9 9z"/></svg></span><span class="kpi-trend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m6 15 6-6 6 6"/></svg> 60 to go</span></div>
+            <strong data-count="340">0</strong><span>Bread-club points</span>
+          </div>
+          <div class="kpi">
+            <div class="kpi-head"><span class="kpi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></span></div>
+            <strong data-count="2">0</strong><span>Reservations booked</span>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel reveal">
+            <div class="panel-head"><div><h3>Order progress</h3><p>Order #2841 &middot; pickup today at 09:30</p></div></div>
+            <ol class="steps">
+              <li class="step is-done"><span class="step-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M20 6 9 17l-5-5"/></svg></span><div class="step-body"><h4>Order placed</h4><p>07:12 &middot; confirmed by the counter</p></div></li>
+              <li class="step is-done"><span class="step-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M20 6 9 17l-5-5"/></svg></span><div class="step-body"><h4>Dough prepared</h4><p>07:40 &middot; cold-fermented 24 hours</p></div></li>
+              <li class="step is-now"><span class="step-dot">3</span><div class="step-body"><h4>In the oven</h4><p>Starts 08:00 &middot; hearth bake, 40 minutes</p></div></li>
+              <li class="step"><span class="step-dot">4</span><div class="step-body"><h4>Ready for pickup</h4><p>From 09:30 &middot; counter 2</p></div></li>
+            </ol>
+          </div>
+
+          <div class="panel reveal" data-delay="1">
+            <div class="panel-head"><div><h3>Recent activity</h3><p>Your last few visits to Stackly</p></div></div>
+            <div class="feed">
+              <div class="feed-item">
+                <span class="feed-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18"/></svg></span>
+                <div class="feed-body"><h4>Order #2841 placed</h4><p>2 country sourdough, 6 butter croissants &middot; ₹46.00</p><time>Today, 07:12</time></div>
+              </div>
+              <div class="feed-item">
+                <span class="feed-ico feed-ico--berry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+                <div class="feed-body"><h4>Favorited pistachio croissant</h4><p>Saved to your list for the weekend</p><time>Yesterday</time></div>
+              </div>
+              <div class="feed-item">
+                <span class="feed-ico feed-ico--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <div class="feed-body"><h4>Tasting table booked</h4><p>Friday 15:00 &middot; pastry flight for four</p><time>2 days ago</time></div>
+              </div>
+              <div class="feed-item">
+                <span class="feed-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7 7 .5-5.4 4.6L18.3 21 12 17.3 5.7 21l1.7-6.9L2 9.5 9 9z"/></svg></span>
+                <div class="feed-body"><h4>+40 points earned</h4><p>Bread-club balance: 340 points</p><time>4 days ago</time></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ORDERS ============ -->
+      <section class="dash-section" id="sec-orders">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3>My orders</h3><p>3 orders this month &middot; 1 in progress</p></div>
+            <a class="button button--dark button--sm" href="404dash.html" data-dashboard-demo>Order again</a>
+          </div>
+          <div class="table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Order</th><th>Placed</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><b>#2841</b></td><td>Today, 07:12</td>
+                  <td>2 sourdough, 6 croissants</td><td><b>₹46.00</b></td>
+                  <td><span class="status status--wait">In the oven</span></td>
+                  <td><a class="button button--sm button--ghost" href="404dash.html" data-dashboard-demo>Track</a></td>
+                </tr>
+                <tr>
+                  <td><b>#2788</b></td><td>Sat, 09:02</td>
+                  <td>Chocolate ganache cake</td><td><b>₹42.00</b></td>
+                  <td><span class="status status--ok">Collected</span></td>
+                  <td><a class="button button--sm button--ghost" href="404dash.html" data-dashboard-demo>View</a></td>
+                </tr>
+                <tr>
+                  <td><b>#2714</b></td><td>Wed, 08:31</td>
+                  <td>Weekend platter</td><td><b>₹48.00</b></td>
+                  <td><span class="status status--ok">Collected</span></td>
+                  <td><a class="button button--sm button--ghost" href="404dash.html" data-dashboard-demo>View</a></td>
+                </tr>
+                <tr>
+                  <td><b>#2660</b></td><td>Fri, 17:45</td>
+                  <td>Macaron set, tarts x4</td><td><b>₹34.00</b></td>
+                  <td><span class="status status--bad">Cancelled</span></td>
+                  <td><a class="button button--sm button--ghost" href="404dash.html" data-dashboard-demo>View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAVORITES ============ -->
+      <section class="dash-section" id="sec-favorites">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3>Saved favorites</h3><p>Seven bakes you keep coming back for</p></div>
+            <a class="button button--dark button--sm" href="404dash.html" data-dashboard-demo>Add all to cart</a>
+          </div>
+          <div class="row-list">
+            <div class="row-item">
+              <img src="assets/img/bread-sourdough.webp" alt="Country sourdough loaf" loading="lazy">
+              <div class="row-body"><h4>Country sourdough</h4><p>Breads &middot; baked daily at 06:30</p></div>
+              <div class="row-end"><b>₹8.00</b><span>Favorite</span></div>
+            </div>
+            <div class="row-item">
+              <img src="assets/img/pastry-croissant.webp" alt="Butter croissants" loading="lazy">
+              <div class="row-body"><h4>Pistachio croissant</h4><p>Pastry &middot; weekend special</p></div>
+              <div class="row-end"><b>₹5.50</b><span>Favorite</span></div>
+            </div>
+            <div class="row-item">
+              <img src="assets/img/cake-chocolate.webp" alt="Chocolate ganache cake" loading="lazy">
+              <div class="row-body"><h4>Chocolate ganache cake</h4><p>Cakes &middot; 8&Prime; round &middot; 48h notice</p></div>
+              <div class="row-end"><b>₹42.00</b><span>Favorite</span></div>
+            </div>
+            <div class="row-item">
+              <img src="assets/img/dessert-macaron.webp" alt="Macaron set" loading="lazy">
+              <div class="row-body"><h4>Macaron set</h4><p>Desserts &middot; box of six</p></div>
+              <div class="row-end"><b>₹14.00</b><span>Favorite</span></div>
+            </div>
+            <div class="row-item">
+              <img src="assets/img/gift-basket.webp" alt="Brunch gift basket" loading="lazy">
+              <div class="row-body"><h4>Brunch gift basket</h4><p>Gifts &middot; ribboned by hand</p></div>
+              <div class="row-end"><b>₹54.00</b><span>Favorite</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REWARDS ============ -->
+      <section class="dash-section" id="sec-rewards">
+        <div class="kpi-grid">
+          <div class="kpi"><div class="kpi-head"><span class="kpi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7 7 .5-5.4 4.6L18.3 21 12 17.3 5.7 21l1.7-6.9L2 9.5 9 9z"/></svg></span></div><strong data-count="340">0</strong><span>Points balance</span></div>
+          <div class="kpi"><div class="kpi-head"><span class="kpi-ico kpi-ico--berry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></div><strong data-count="12">0</strong><span>Rewards claimed</span></div>
+          <div class="kpi"><div class="kpi-head"><span class="kpi-ico kpi-ico--green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="9"/></svg></span></div><strong data-count="60">0</strong><span>Points to next reward</span></div>
+          <div class="kpi"><div class="kpi-head"><span class="kpi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18"/></svg></span></div><strong data-count="48">0</strong><span>Orders completed</span></div>
+        </div>
+
+        <div class="grid-2">
+          <div class="panel reveal">
+            <div class="panel-head"><div><h3>Bread club tier</h3><p>You are 60 points from Baker&rsquo;s Table</p></div></div>
+            <div class="meter" style="margin-bottom:1.1rem"><div class="meter-head"><span>Counter regular</span><b>340 / 400</b></div><div class="meter-track"><i class="meter-fill" data-meter="85"></i></div></div>
+            <div class="meter" style="margin-bottom:1.1rem"><div class="meter-head"><span>Baker&rsquo;s Table</span><b>Locked</b></div><div class="meter-track"><i class="meter-fill" data-meter="45"></i></div></div>
+            <div class="meter"><div class="meter-head"><span>Founder&rsquo;s Batch</span><b>Locked</b></div><div class="meter-track"><i class="meter-fill" data-meter="15"></i></div></div>
+          </div>
+
+          <div class="panel panel--dark reveal" data-delay="1">
+            <div class="panel-head"><div><h3>Available rewards</h3><p>Redeem at checkout or the counter</p></div></div>
+            <div class="row-list row-list--flat">
+              <div class="row-item"><div class="row-body"><h4>Free loaf of the week</h4><p>300 points &middot; any artisan loaf</p></div><a class="button button--sm" href="404dash.html" data-dashboard-demo>Redeem</a></div>
+              <div class="row-item"><div class="row-body"><h4>Croissant dozen</h4><p>250 points &middot; twelve butter croissants</p></div><a class="button button--sm" href="404dash.html" data-dashboard-demo>Redeem</a></div>
+              <div class="row-item"><div class="row-body"><h4>Cake upgrade</h4><p>500 points &middot; free tier upgrade</p></div><a class="button button--sm button--light" href="404dash.html" data-dashboard-demo>Locked</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RESERVATIONS ============ -->
+      <section class="dash-section" id="sec-reservations">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h3>My reservations</h3><p>Tasting tables and pickups you have booked</p></div>
+            <a class="button button--dark button--sm" href="404dash.html" data-dashboard-demo>+ Book a table</a>
+          </div>
+          <div class="row-list">
+            <div class="row-item">
+              <img src="assets/img/dessert-cheesecake.webp" alt="Berry cheesecake" loading="lazy">
+              <div class="row-body"><h4>Pastry flight for four</h4><p>Friday, 15:00 &middot; window table &middot; confirmed</p></div>
+              <div class="row-end"><b>Fri 15:00</b><span>Confirmed</span></div>
+            </div>
+            <div class="row-item">
+              <img src="assets/img/bread-assorted.webp" alt="Assorted loaves" loading="lazy">
+              <div class="row-body"><h4>Sourdough pickup</h4><p>Today, 09:30 &middot; counter 2 &middot; order #2841</p></div>
+              <div class="row-end"><b>Today 09:30</b><span>Ready soon</span></div>
+            </div>
+            <div class="row-item">
+              <img src="assets/img/combo-platter.webp" alt="Weekend platter" loading="lazy">
+              <div class="row-body"><h4>Weekend brunch platter</h4><p>Saturday, 10:00 &middot; pickup &middot; pending</p></div>
+              <div class="row-end"><b>Sat 10:00</b><span>Pending</span></div>
+            </div>
+          </div>
+          <div class="form-actions"><a class="button" href="404dash.html" data-dashboard-demo>Manage bookings</a></div>
+        </div>
+      </section>
+
+      <!-- ============ SETTINGS ============ -->
+      <section class="dash-section" id="sec-settings">
+        <div class="grid-2">
+          <div class="panel">
+            <div class="panel-head"><div><h3>Profile</h3><p>How the counter greets you</p></div></div>
+            <div class="field">
+              <label class="form-label" for="prof-name">Full name</label>
+              <input class="input" id="prof-name" type="text" value="Ada Whitfield">
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label class="form-label" for="prof-email">Email address</label>
+                <input class="input" id="prof-email" type="email" value="ada@example.com">
+              </div>
+              <div class="field">
+                <label class="form-label" for="prof-phone">Phone number <small>10 digits</small></label>
+                <input class="input" id="prof-phone" type="tel" value="5551234567">
+              </div>
+            </div>
+            <div class="field">
+              <label class="form-label" for="prof-tz">Preferred pickup window</label>
+              <div class="custom-select">
+                <input class="select-hidden" id="prof-tz" type="hidden" name="pickup" value="morning">
+                <button class="select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" data-placeholder="Choose a pickup window">
+                  <span class="select-label">Mornings (07:00&ndash;11:00)</span>
+                  <span class="select-caret"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+                </button>
+                <div class="select-menu" role="listbox" aria-label="Pickup window">
+                  <div class="select-option" role="option" tabindex="0" data-value="morning" data-label="Mornings (07:00&ndash;11:00)" aria-selected="true">Mornings (07:00&ndash;11:00)</div>
+                  <div class="select-option" role="option" tabindex="0" data-value="midday" data-label="Midday (11:00&ndash;15:00)" aria-selected="false">Midday (11:00&ndash;15:00)</div>
+                  <div class="select-option" role="option" tabindex="0" data-value="evening" data-label="Evenings (15:00&ndash;19:00)" aria-selected="false">Evenings (15:00&ndash;19:00)</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="button" type="button" data-dashboard-demo>Save profile</button>
+              <button class="button button--ghost" type="button" data-dashboard-demo>Discard</button>
+            </div>
+          </div>
+
+          <div class="panel panel--dark">
+            <div class="panel-head"><div><h3>Preferences</h3><p>Emails you actually want</p></div></div>
+            <div class="field">
+              <div class="check-grid">
+                <label class="check-chip is-on"><input type="checkbox" checked> Order updates</label>
+                <label class="check-chip is-on"><input type="checkbox" checked> Weekly bake list</label>
+                <label class="check-chip is-on"><input type="checkbox" checked> Bread-club points</label>
+                <label class="check-chip"><input type="checkbox"> Seasonal drops</label>
+                <label class="check-chip"><input type="checkbox"> Events &amp; tastings</label>
+              </div>
+            </div>
+            <div class="field">
+              <label class="form-label" for="prof-diet">Dietary note</label>
+              <input class="input" id="prof-diet" type="text" placeholder="e.g. no walnuts, gluten-friendly bakes">
+            </div>
+            <div class="form-actions">
+              <button class="button button--light" type="button" data-dashboard-demo>Update preferences</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>
